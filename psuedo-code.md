@@ -10,9 +10,18 @@ Calendar features:
 how to tackle
 1.add current date
 2.HTML to set up conatiners for time blocks
+each container needs its own div to hold a text area time and a save button.
 3.format conatiners
 
 JQuery:
 1.click event - when a user clicks on container they can type in text
 2.save button w/ click event to have them store their note
 3.color code for past present and future.
+
+HTML-
+one big container for all of the time
+
+per time i need div for just that time block
+then i need a div for the text of the 9
+then I need a text are
+and a button

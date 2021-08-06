@@ -11,7 +11,7 @@ how to tackle
 1.add current date
 2.HTML to set up conatiners for time blocks
 each container needs its own div to hold a text area time and a save button.
-3.format conatiners
+3.format conatiners - all ready done with classes
 
 JQuery:
 1.click event - when a user clicks on container they can type in text

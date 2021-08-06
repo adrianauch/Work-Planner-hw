@@ -11,7 +11,7 @@ var hr15 = $("#15");
 var hr16 = $("#16");
 var hr17 = $("#17");
 var hr18 = $("#18");
-var savebtn = $(".savebtn");
+var savebtn = $(".saveBtn");
 var date = $("#currentDay");
 var today = moment();
 
@@ -20,39 +20,38 @@ function setDate() {
   $("#currentDay").text(
     ["Today's Date Is: "] + today.format("dddd MMM Do, YYYY")
   );
-  UpdateTime();
+  UpdateTime(); //calls function for colro coding and retrieving from local storage.
 }
 //Update time of day and added in graabing from loal storage into my for loop.
 function UpdateTime() {
-  var currentTime = moment().format("H");
   //varibale of current time on the hour
+  var currentTime = moment().format("H");
+  //for loop iterating data between 7- 18 for the hours that my daily planner is showing.
   for (var i = 7; i <= 18; i++) {
-    // if timeofday is > the current time then style a box a certain way.
+    // if timeofday is > the current time then style background according to CSS
     if (i > currentTime) {
       $("#" + i).addClass("future");
-      // else if timeof day is < currentTime then style box certain way.
+      // else if timeof day is < currentTime then style background according to CSS
     } else if (i < currentTime) {
       $("#" + i).addClass("past");
-      //else if timeof Day == currentTime then style back ground like this.
+      //else if timeof Day == currentTime then style background according to CSS
     } else if (i == currentTime) {
       $("#" + i).addClass("present");
     }
+    //pulling into local storage my key ids.
     $("#t" + i).val(localStorage.getItem("s" + i));
   }
 }
 
-//local stroage to save user input
-
-//want a variable that equals the users in put.
-//will i need this for each hour?
-//use .val to get input.
-//we will need ot get item to display to user.
-
 //Call Functions
 setDate();
 
+//event Listner for saving data to local storage.
 savebtn.on("click", function () {
+  //setting variable for text area that receives user input (value).
   var text = $(this).siblings("textarea").val();
+  //pulling the idea from which button is pressed.
   var btnid = $(this).attr("id");
+  //storing the data with the button id as key and the text as the value.
   localStorage.setItem(btnid, text);
 });

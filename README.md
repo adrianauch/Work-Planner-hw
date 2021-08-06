@@ -11,7 +11,7 @@ A browswer is all that is required to use this application.
 ####
 
 ````md
-    ![alt text](assets/images/screenshot.png)
+    ![DAily palnner with date and hour blocks color coordinated based on hour](assets/images/Screen Shot 2021-08-06 at 12.41.10 PM.png)
     ```
 
 #####

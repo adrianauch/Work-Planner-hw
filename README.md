@@ -20,6 +20,10 @@ Jquery: https://jquery.com/download/
 Bootstrap: https://getbootstrap.com/
 Moment.js: https://momentjs.com/
 
+### Deployed Link
+
+https://adrianauch.github.io/Work-Planner-hw/
+
 #### License
 
 Copyright 2021
